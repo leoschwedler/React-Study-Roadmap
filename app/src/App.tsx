@@ -1,11 +1,9 @@
-import { Container } from "./components/1/Ex8";
+import "./App.css";
 
-function App() {
-  return (
-    <>
-      <Container></Container>
-    </>
-  );
-}
+// function App() {
+//   return (
 
-export default App;
+//   );
+// }
+
+// export default App;
