@@ -1,25 +1,23 @@
-import "./App.css";
-import { ProductCard } from "./components/ProductCard";
+import { ProductStatusCard } from "./components/2/ProductStatusCard";
 
 function App() {
-  const object = {
-    name: "Windows",
-    price: 4000,
-    category: "Eletronico",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKssAi9ukJUgWFDS85-reJ6UgUMv0ZsbyP_08nOhTOTUCuM_M4gJbUyOJs&s=10",
-  };
-
-  function retornaBomDia(name) {
-    return `Bom dia ${name}`;
-  }
-
   return (
     <>
-      <ProductCard
-        product={object}
+      <ProductStatusCard
+        name="Telefone"
+        price={1500}
+        quantity={0}
         featured={true}
-        formatPrice={retornaBomDia}
       />
+
+      <ProductStatusCard
+        name="Xbox"
+        price={1500}
+        quantity={3}
+        featured={false}
+      />
+
+      <ProductStatusCard name="Pc" price={1500} quantity={10} featured={true} />
     </>
   );
 }
