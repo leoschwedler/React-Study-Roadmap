@@ -1,5 +1,17 @@
-export function PermissionStatus({ name, isLoggedIn, role }) {
-  let content;
+import type { ReactNode } from "react";
+
+type PermissionStatusProps = {
+  name: string;
+  isLoggedIn: boolean;
+  role: "admin" | "user" | "visitor";
+};
+
+export function PermissionStatus({
+  name,
+  isLoggedIn,
+  role,
+}: PermissionStatusProps) {
+  let content: ReactNode;
   if (role === "admin") {
     content = <p>Acesso administrativo</p>;
   } else if (role === "user") {

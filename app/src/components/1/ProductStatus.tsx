@@ -1,15 +1,14 @@
-export function ProductStatus(props) {
-  let mensagem;
+type ProductStatusProps = {
+  available: boolean;
+  name: string;
+};
 
-  if (props.available) {
-    mensagem = "Disponivel";
-  } else {
-    mensagem = "Indisponivel";
-  }
+export function ProductStatus({ available, name }: ProductStatusProps) {
+  const mensagem = available ? "Disponivel" : "Indisponivel";
 
   return (
     <>
-      <h1>Name: {props.name}</h1>
+      <h1>Name: {name}</h1>
       <p>Disponivel: {mensagem}</p>
     </>
   );

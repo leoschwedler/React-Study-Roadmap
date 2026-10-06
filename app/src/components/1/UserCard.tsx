@@ -1,17 +1,13 @@
-// export function UserCard({ name, profession }) {
-//   return (
-//     <>
-//       <h2>Bom dia {name}</h2>
-//       <h2>Sua profissao é: {profession}</h2>
-//     </>
-//   );
-// }
+type UserCardProps = {
+  name: string;
+  profession: string;
+};
 
-export function UserCard(props) {
+export function UserCard({ name, profession }: UserCardProps) {
   return (
     <>
-      <h2>Bom dia {props.name}</h2>
-      <h2>Sua profissao é: {props.profession}</h2>
+      <h2>Bom dia {name}</h2>
+      <h2>Sua profissao é: {profession}</h2>
     </>
   );
 }

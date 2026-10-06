@@ -1,4 +1,16 @@
-export function ProductStatusCard({ name, price, quantity, featured }) {
+type ProductStatusCardProps = {
+  name: string;
+  price: number | string;
+  quantity: number;
+  featured: boolean;
+};
+
+export function ProductStatusCard({
+  name,
+  price,
+  quantity,
+  featured,
+}: ProductStatusCardProps) {
   if (quantity === 0) {
     return (
       <>

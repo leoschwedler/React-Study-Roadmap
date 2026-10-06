@@ -1,4 +1,14 @@
-export function AccountStatus({ name, isLoggedIn, isAdmin }) {
+type AccountStatusProps = {
+  name: string;
+  isLoggedIn: boolean;
+  isAdmin: boolean;
+};
+
+export function AccountStatus({
+  name,
+  isLoggedIn,
+  isAdmin,
+}: AccountStatusProps) {
   if (isLoggedIn) {
     return (
       <>

@@ -1,4 +1,4 @@
-import { Fragment } from "react/jsx-runtime";
+import { Fragment } from "react";
 
 export function OrderList() {
   const pedidos = [
@@ -25,14 +25,14 @@ export function OrderList() {
       <ol>
         {pedidos.map((pedido) => {
           return (
-            <>
-              <li key={pedido.customer}>{pedido.customer}</li>
+            <Fragment key={pedido.id}>
+              <li>{pedido.customer}</li>
               <ul>
                 {pedido.products.map((produto) => {
                   return <li key={produto.id}>{produto.name}</li>;
                 })}
               </ul>
-            </>
+            </Fragment>
           );
         })}
       </ol>

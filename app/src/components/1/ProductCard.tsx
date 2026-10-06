@@ -1,4 +1,19 @@
-export function ProductCard({ product, featured, formatPrice }) {
+type ProductCardProps = {
+  product: {
+    name: string;
+    price: number | string;
+    category: string;
+    img: string;
+  };
+  featured: boolean;
+  formatPrice: (value: string) => string;
+};
+
+export function ProductCard({
+  product,
+  featured,
+  formatPrice,
+}: ProductCardProps) {
   return (
     <>
       <h1>Nome: {product.name}</h1>

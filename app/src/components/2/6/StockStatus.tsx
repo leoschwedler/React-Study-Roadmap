@@ -1,4 +1,9 @@
-export function StockStatus({ name, quantity }) {
+type StockStatusProps = {
+  name: string;
+  quantity: number;
+};
+
+export function StockStatus({ name, quantity }: StockStatusProps) {
   if (quantity === 0) {
     return (
       <>
