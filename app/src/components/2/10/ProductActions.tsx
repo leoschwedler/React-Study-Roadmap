@@ -5,9 +5,9 @@ export function ProductActions() {
 
   return (
     <>
-      <button onClick={() => handleSelect("Teclado")}></button>
-      <button onClick={() => handleSelect("Mouse")}></button>
-      <button onClick={() => handleSelect("Monitor")}></button>
+      <button onClick={() => handleSelect("Teclado")}>Teclado</button>
+      <button onClick={() => handleSelect("Mouse")}>Mouse</button>
+      <button onClick={() => handleSelect("Monitor")}>Monitor</button>
     </>
   );
 }

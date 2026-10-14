@@ -1,5 +1,6 @@
 export function ContactForm() {
-  function handleSubmit() {
+  function handleSubmit(event) {
+    event.preventDefault();
     console.log("Formulário enviado!");
   }
 

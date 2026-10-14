@@ -1,9 +1,9 @@
-import AppCustom from "./components/2/9/App";
+import { InteractiveCart } from "./components/3/InteractiveCart";
 
 function App() {
   return (
     <>
-      <AppCustom isLoggedIn={true} />
+      <InteractiveCart />
     </>
   );
 }
